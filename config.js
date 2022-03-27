@@ -1,7 +1,6 @@
-import dotenv from 'dotenv';
-dotenv.config({ path: './config.env' });
+require('dotenv').config({ path: './config.env' });
 
-export default {
+module.exports = {
     token: process.env.TOKEN || "",
     db: process.env.DB || "",
     prefix: ">",

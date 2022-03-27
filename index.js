@@ -1,8 +1,8 @@
-import { Client, Intents, Collection } from "discord.js";
-import { readdirSync } from "fs";
-import mongoose from 'mongoose';
+const { Client, Intents, Collection } = require("discord.js");
+const { readdirSync } = require("fs");
+const mongoose = require('mongoose');
 
-import config from './config.js';
+const config = require('./config.js');
 
 const client = new Client({
     intents: [

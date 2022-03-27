@@ -1,7 +1,7 @@
-import guildModel from '../models/guild.js';
+const guildModel = require('../models/guild.js');
 let cooldown = {};
 
-export default {
+module.exports = {
     name: 'messageCreate',
     run: async (client, message) => {
         if (message.author.bot || !message.guild || message.webhookId) return;
@@ -57,4 +57,4 @@ export default {
 
         if (command) command.run(client, message, args);
     }
-}
+};
